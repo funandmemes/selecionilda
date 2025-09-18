@@ -31,7 +31,7 @@ def handle_sigint(signum, frame):
     if confirm_exit:
         print(f"{RED}\nSaindo...{RESET}")
         exit_requested = True
-        sys.exit(0)
+        os._exit(0)
     else:
         print(f"{YELLOW}\nPressione Ctrl+C novamente para confirmar a saída.{RESET}")
         confirm_exit = True
